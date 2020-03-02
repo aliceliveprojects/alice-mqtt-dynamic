@@ -1,18 +1,20 @@
 {
-  "name": "node-red-contrib-mqtt-dynamic",
+  "name": "node-red-contrib-alice-mqtt-dynamic",
   "version": "1.0.9",
-  "description": "Mqtt with backpressure support",
+  "description": "Mqtt with backpressure support, support for ws: and mqtt:",
   "main": "mqtt-dynamic.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sajayantony/node-red-contrib-mqtt-dynamic.git"
+    "url": "git+https://github.com/aliceliveprojects/alice-mqtt-dynamic.git"
   },
   "keywords": [
     "node-red",
     "mqtt",
+    "ws",
+    "websockets",
     "backpressure"
   ],
   "node-red": {
@@ -21,12 +23,12 @@
       "mqtt-dynamic complete": "mqtt-dynamic-complete.js"
     }
   },
-  "author": "Sajay Antony",
+  "author": "Sajay Antony with alice",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/sajayantony/node-red-contrib-mqtt-dynamic/issues"
+    "url": "https://github.com/aliceliveprojects/alice-mqtt-dynamic/issues"
   },
-  "homepage": "https://github.com/sajayantony/node-red-contrib-mqtt-dynamic#readme",
+  "homepage": "https://github.com/aliceliveprojects/alice-mqtt-dynamic#readme",
   "dependencies": {
     "is-utf8": "^0.2.1",
     "mqtt": "^1.8.0"

@@ -1,0 +1,2776 @@
+[
+    {
+      "id": "2c93bc3a.a8bc94",
+      "type": "tab",
+      "label": "Mqtt Test",
+      "disabled": false,
+      "info": ""
+    },
+    {
+      "id": "a53c4dbf.e31fd",
+      "type": "tab",
+      "label": "Mqtt Subscribe",
+      "disabled": false,
+      "info": ""
+    },
+    {
+      "id": "6d1f01a4.57281",
+      "type": "subflow",
+      "name": "Config Folder",
+      "info": "A block that reads in a config file and coverts\nit to a JSON object.\n\nTo specify where the config files are, configPath\nparameter within the global context needs to be set specifing the absolute path to the config folder.\n\nSet the msg.payload to specify which config file to read.\n\nExample : \"config.json\" ===>\n        reads in the config.json file",
+      "category": "",
+      "in": [
+        {
+          "x": 260,
+          "y": 240,
+          "wires": [
+            {
+              "id": "7eeaaf6e.1128"
+            }
+          ]
+        }
+      ],
+      "out": [
+        {
+          "x": 1200,
+          "y": 240,
+          "wires": [
+            {
+              "id": "175d82f0.64865d",
+              "port": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "34a61884.97e96",
+      "type": "mqtt-broker",
+      "z": "",
+      "name": "",
+      "broker": "m15.cloudmqtt.com",
+      "port": "16876",
+      "clientid": "",
+      "usetls": false,
+      "compatmode": true,
+      "keepalive": "60",
+      "cleansession": true,
+      "birthTopic": "",
+      "birthQos": "0",
+      "birthRetain": "false",
+      "birthPayload": "",
+      "closeTopic": "",
+      "closeQos": "0",
+      "closeRetain": "false",
+      "closePayload": "",
+      "willTopic": "",
+      "willQos": "0",
+      "willRetain": "false",
+      "willPayload": ""
+    },
+    {
+      "id": "991ebefe.746fa8",
+      "type": "mqtt-dynamic-broker",
+      "z": "",
+      "broker": "m15.cloudmqtt.com",
+      "port": "16876",
+      "clientid": ""
+    },
+    {
+      "id": "a68f29ff.964628",
+      "type": "mqtt-broker",
+      "broker": "test.mosquitto.org",
+      "port": "1883",
+      "clientid": "",
+      "usetls": false,
+      "compatmode": true,
+      "keepalive": 15,
+      "cleansession": true,
+      "birthQos": "0",
+      "willQos": "0"
+    },
+    {
+      "id": "aa568d74.86a2f8",
+      "type": "board-config",
+      "z": "",
+      "board": "GrovePi"
+    },
+    {
+      "id": "2b0f4842.9954f8",
+      "type": "mqtt-broker",
+      "z": "",
+      "name": "iot.eclipse.org",
+      "broker": "iot.eclipse.org",
+      "port": "1883",
+      "clientid": "",
+      "usetls": false,
+      "compatmode": true,
+      "keepalive": "60",
+      "cleansession": true,
+      "birthTopic": "",
+      "birthQos": "0",
+      "birthRetain": "false",
+      "birthPayload": "",
+      "closeTopic": "",
+      "closeQos": "0",
+      "closeRetain": "false",
+      "closePayload": "",
+      "willTopic": "",
+      "willQos": "0",
+      "willRetain": "false",
+      "willPayload": ""
+    },
+    {
+      "id": "3fed1d09.979342",
+      "type": "mqtt-dynamic-broker",
+      "z": "",
+      "broker": "iot.eclipse.org",
+      "port": "1883",
+      "clientid": ""
+    },
+    {
+      "id": "f126b440.5fa25",
+      "type": "mqtt-broker",
+      "broker": "test.mosquitto.org",
+      "port": "1883",
+      "clientid": "",
+      "usetls": false,
+      "compatmode": true,
+      "keepalive": 15,
+      "cleansession": true,
+      "birthQos": "0",
+      "willQos": "0"
+    },
+    {
+      "id": "cae0f397.d1128",
+      "type": "mqtt-dynamic-broker",
+      "z": "",
+      "broker": "iot.eclipse.org",
+      "port": "1883",
+      "clientid": ""
+    },
+    {
+      "id": "f82ca6bf.23fe08",
+      "type": "mqtt-broker",
+      "z": "",
+      "name": "alicedigitallabs3",
+      "broker": "iot.eclipse.org",
+      "port": "1883",
+      "clientid": "",
+      "usetls": false,
+      "compatmode": true,
+      "keepalive": "60",
+      "cleansession": true,
+      "birthTopic": "",
+      "birthQos": "0",
+      "birthRetain": "false",
+      "birthPayload": "",
+      "closeTopic": "",
+      "closeQos": "0",
+      "closeRetain": "false",
+      "closePayload": "",
+      "willTopic": "",
+      "willQos": "0",
+      "willRetain": "false",
+      "willPayload": ""
+    },
+    {
+      "id": "844ca1d7.ccc61",
+      "type": "mqtt-broker",
+      "z": "",
+      "name": "alicedigitallabs3",
+      "broker": "broker.hivemq.com",
+      "port": "1883",
+      "clientid": "",
+      "usetls": false,
+      "compatmode": true,
+      "keepalive": "60",
+      "cleansession": true,
+      "birthTopic": "",
+      "birthQos": "0",
+      "birthRetain": "false",
+      "birthPayload": "",
+      "closeTopic": "",
+      "closeQos": "0",
+      "closeRetain": "false",
+      "closePayload": "",
+      "willTopic": "",
+      "willQos": "0",
+      "willRetain": "false",
+      "willPayload": ""
+    },
+    {
+      "id": "30ec8839.c88708",
+      "type": "mqtt-broker",
+      "z": "",
+      "name": "alicedigitallabs3",
+      "broker": "test.mosquitto.org",
+      "port": "1883",
+      "clientid": "",
+      "usetls": false,
+      "compatmode": true,
+      "keepalive": "60",
+      "cleansession": true,
+      "birthTopic": "",
+      "birthQos": "0",
+      "birthRetain": "false",
+      "birthPayload": "",
+      "closeTopic": "",
+      "closeQos": "0",
+      "closeRetain": "false",
+      "closePayload": "",
+      "willTopic": "",
+      "willQos": "0",
+      "willRetain": "false",
+      "willPayload": ""
+    },
+    {
+      "id": "8e1af607.1324c8",
+      "type": "mqtt-dynamic-broker",
+      "z": "",
+      "broker": "test.mosquitto.org",
+      "port": "1883",
+      "clientid": ""
+    },
+    {
+      "id": "c5febf12.85693",
+      "type": "mqtt-broker",
+      "z": "",
+      "name": "alicedigitallabs3",
+      "broker": "test.mosquitto.org",
+      "port": "1883",
+      "clientid": "",
+      "usetls": false,
+      "compatmode": true,
+      "keepalive": "60",
+      "cleansession": true,
+      "birthTopic": "",
+      "birthQos": "0",
+      "birthRetain": "false",
+      "birthPayload": "",
+      "closeTopic": "",
+      "closeQos": "0",
+      "closeRetain": "false",
+      "closePayload": "",
+      "willTopic": "",
+      "willQos": "0",
+      "willRetain": "false",
+      "willPayload": ""
+    },
+    {
+      "id": "5838828f.e06fec",
+      "type": "mqtt-broker",
+      "z": "",
+      "name": "websockets",
+      "broker": "ws://thedigitallabsmqtt.herokuapp.com",
+      "port": "80",
+      "clientid": "",
+      "usetls": false,
+      "compatmode": true,
+      "keepalive": "60",
+      "cleansession": true,
+      "birthTopic": "",
+      "birthQos": "0",
+      "birthPayload": "",
+      "closeTopic": "",
+      "closeQos": "0",
+      "closePayload": "",
+      "willTopic": "",
+      "willQos": "0",
+      "willPayload": ""
+    },
+    {
+      "id": "6765be1.f21714",
+      "type": "mqtt-dynamic-broker",
+      "z": "",
+      "broker": "thedigitallabsmqtt.herokuapp.com",
+      "port": "80",
+      "clientid": ""
+    },
+    {
+      "id": "c2e8b4b4.44eaf8",
+      "type": "comment",
+      "z": "6d1f01a4.57281",
+      "name": "Retireves the contents of the config file",
+      "info": "",
+      "x": 690,
+      "y": 200,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "7eeaaf6e.1128",
+      "type": "function",
+      "z": "6d1f01a4.57281",
+      "name": "Global Config File Path",
+      "func": "configPath = global.get(\"configPath\");\n\nmsg.filename = configPath + msg.payload;\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 470,
+      "y": 240,
+      "wires": [
+        [
+          "33316512.d2972a"
+        ]
+      ]
+    },
+    {
+      "id": "33316512.d2972a",
+      "type": "file in",
+      "z": "6d1f01a4.57281",
+      "name": "Json File",
+      "filename": "",
+      "format": "utf8",
+      "chunk": false,
+      "sendError": false,
+      "x": 700,
+      "y": 240,
+      "wires": [
+        [
+          "175d82f0.64865d"
+        ]
+      ]
+    },
+    {
+      "id": "175d82f0.64865d",
+      "type": "json",
+      "z": "6d1f01a4.57281",
+      "name": "Config Object",
+      "property": "payload",
+      "action": "obj",
+      "pretty": false,
+      "x": 900,
+      "y": 240,
+      "wires": [
+        [
+          
+        ]
+      ]
+    },
+    {
+      "id": "e942349d.e4f138",
+      "type": "inject",
+      "z": 0,
+      "name": "Testing All",
+      "topic": "",
+      "payload": "all",
+      "payloadType": "str",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 220,
+      "y": 300,
+      "wires": [
+        [
+          "8b215bfa.da36c8"
+        ]
+      ]
+    },
+    {
+      "id": "7cd5a433.7d1edc",
+      "type": "mqtt out",
+      "z": 0,
+      "name": "",
+      "topic": "",
+      "qos": "",
+      "retain": "",
+      "broker": "844ca1d7.ccc61",
+      "x": 1030,
+      "y": 600,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "b6028fc3.33b22",
+      "type": "inject",
+      "z": 0,
+      "name": "Pi State",
+      "topic": "",
+      "payload": "pi_state",
+      "payloadType": "str",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 210,
+      "y": 400,
+      "wires": [
+        [
+          "8b215bfa.da36c8"
+        ]
+      ]
+    },
+    {
+      "id": "46c21fe2.dba8d",
+      "type": "inject",
+      "z": 0,
+      "name": "Game State",
+      "topic": "",
+      "payload": "game_state",
+      "payloadType": "str",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 230,
+      "y": 440,
+      "wires": [
+        [
+          "8b215bfa.da36c8"
+        ]
+      ]
+    },
+    {
+      "id": "8b215bfa.da36c8",
+      "type": "function",
+      "z": 0,
+      "name": "",
+      "func": "\nlet messages = [];\n\nif (msg.payload === \"all\" || msg.payload === \"control\" || msg.payload === \"pi_state\") {\n    \n    let request = {\n        requested : \"debug\"\n    }\n    \n    let msg = {\n        topic: \"testUUID/control/pi_state\",\n        payload: request,\n        retain : true\n    };\n    messages.push(msg);\n}\n\nif (msg.payload === \"all\" || msg.payload === \"control\" || msg.payload === \"game_state\") {\n    let msg = {\n        topic: \"testUUID/control/game_state\",\n        payload: \"Testing Game State\"\n    };\n    messages.push(msg);\n}\n\n\nif (msg.payload === \"all\" || msg.payload === \"control\" || msg.payload === \"channel\" || msg.payload === \"throttle\") {\n    \n    let msg = {\n        topic: \"testUUID/control/1/throttle\",\n        payload: {\n            set : 90\n        }\n    };\n    messages.push(msg);\n}\n\n\nif (msg.payload === \"all\" || msg.payload === \"control\" || msg.payload === \"channel\" || msg.payload === \"event\") {\n    let msg = {\n        topic: \"testUUID/control/1/event\",\n        payload: \"Testing Channel Event\"\n    };\n    messages.push(msg);\n}\n\nif (msg.payload === \"all\" || msg.payload === \"control\" || msg.payload === \"channel\" || msg.payload === \"state\") {\n    let request = {\n        state : \"requested\",\n        target : 0\n    }\n    \n    let msg = {\n        topic: \"testUUID/control/1/2/state\",\n        payload: request\n    };\n    messages.push(msg);\n}\n\n\nif (msg.payload === \"all\" || msg.payload === \"control\" || msg.payload === \"channel\" || msg.payload === \"count\") {\n    let msg = {\n        topic: \"testUUID/control/1/1/count\",\n        payload: \"Testing Resource Count\"\n    };\n    messages.push(msg);\n}\n\nif (msg.payload === \"all\" || msg.payload === \"sensors\") {\n    let msg = {\n        topic: \"testUUID/sensors\",\n        payload: \"Testing Sensors\"\n    };\n    messages.push(msg);\n}\n\n\nif (msg.payload === \"all\" || msg.payload === \"sensorId\") {\n    let msg = {\n        topic: \"testUUID/sensors/1\",\n        payload: \"Testing Specific Sensor\"\n    };\n    messages.push(msg);\n}\n\n\nif (msg.payload === \"all\" || msg.payload === \"trigger_percent\") {\n    let msg = {\n        topic: \"testUUID/sensors/1/trigger_percent\",\n        payload: \"Testing Throttle Percent\"\n    };\n    messages.push(msg);\n}\n\n\nif (msg.payload === \"all\" || msg.payload === \"resources\") {\n    let msg = {\n        topic: \"testUUID/resources\",\n        payload: \"Testing Resources\"\n    };\n    messages.push(msg);\n}\n\n\n\n\n\nreturn [messages];",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 630,
+      "y": 580,
+      "wires": [
+        [
+          "7cd5a433.7d1edc"
+        ]
+      ]
+    },
+    {
+      "id": "bfb59f05.cfe61",
+      "type": "inject",
+      "z": 0,
+      "name": "Control",
+      "topic": "",
+      "payload": "control",
+      "payloadType": "str",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 210,
+      "y": 360,
+      "wires": [
+        [
+          "8b215bfa.da36c8"
+        ]
+      ]
+    },
+    {
+      "id": "111acd39.6b6263",
+      "type": "inject",
+      "z": 0,
+      "name": "Channel",
+      "topic": "",
+      "payload": "channel",
+      "payloadType": "str",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 220,
+      "y": 500,
+      "wires": [
+        [
+          "8b215bfa.da36c8"
+        ]
+      ]
+    },
+    {
+      "id": "bb7952dd.be1ce",
+      "type": "inject",
+      "z": 0,
+      "name": "Throttle",
+      "topic": "",
+      "payload": "throttle",
+      "payloadType": "str",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 210,
+      "y": 540,
+      "wires": [
+        [
+          "8b215bfa.da36c8"
+        ]
+      ]
+    },
+    {
+      "id": "623a0792.555618",
+      "type": "inject",
+      "z": 0,
+      "name": "State",
+      "topic": "",
+      "payload": "state",
+      "payloadType": "str",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 210,
+      "y": 580,
+      "wires": [
+        [
+          "8b215bfa.da36c8"
+        ]
+      ]
+    },
+    {
+      "id": "42907cc7.f59294",
+      "type": "inject",
+      "z": 0,
+      "name": "Count",
+      "topic": "",
+      "payload": "count",
+      "payloadType": "str",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 210,
+      "y": 620,
+      "wires": [
+        [
+          "8b215bfa.da36c8"
+        ]
+      ]
+    },
+    {
+      "id": "6be69f22.dd074",
+      "type": "inject",
+      "z": 0,
+      "name": "Event",
+      "topic": "",
+      "payload": "event",
+      "payloadType": "str",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 210,
+      "y": 660,
+      "wires": [
+        [
+          "8b215bfa.da36c8"
+        ]
+      ]
+    },
+    {
+      "id": "f2ae0832.7b9ce8",
+      "type": "inject",
+      "z": 0,
+      "name": "Sensors",
+      "topic": "",
+      "payload": "sensors",
+      "payloadType": "str",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 220,
+      "y": 720,
+      "wires": [
+        [
+          "8b215bfa.da36c8"
+        ]
+      ]
+    },
+    {
+      "id": "fef53d10.3be0a",
+      "type": "inject",
+      "z": 0,
+      "name": "Sensor Id",
+      "topic": "",
+      "payload": "sensorId",
+      "payloadType": "str",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 220,
+      "y": 760,
+      "wires": [
+        [
+          "8b215bfa.da36c8"
+        ]
+      ]
+    },
+    {
+      "id": "7a502d23.8d2394",
+      "type": "inject",
+      "z": 0,
+      "name": "Trigger Percent",
+      "topic": "",
+      "payload": "trigger_percent",
+      "payloadType": "str",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 240,
+      "y": 800,
+      "wires": [
+        [
+          "8b215bfa.da36c8"
+        ]
+      ]
+    },
+    {
+      "id": "d6275f35.8c6a7",
+      "type": "inject",
+      "z": 0,
+      "name": "resources",
+      "topic": "",
+      "payload": "resources",
+      "payloadType": "str",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 220,
+      "y": 860,
+      "wires": [
+        [
+          "8b215bfa.da36c8"
+        ]
+      ]
+    },
+    {
+      "id": "d1a80e9c.3e6df",
+      "type": "inject",
+      "z": 0,
+      "name": "5% Throttle",
+      "topic": "",
+      "payload": "5",
+      "payloadType": "num",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": "",
+      "x": 410,
+      "y": 980,
+      "wires": [
+        [
+          "cebcb026.1e5dc"
+        ]
+      ]
+    },
+    {
+      "id": "2d35da65.c3a096",
+      "type": "inject",
+      "z": 0,
+      "name": "30% Throttle",
+      "topic": "",
+      "payload": "30",
+      "payloadType": "num",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": "",
+      "x": 413,
+      "y": 1041,
+      "wires": [
+        [
+          "cebcb026.1e5dc"
+        ]
+      ]
+    },
+    {
+      "id": "8cc08a29.38a408",
+      "type": "inject",
+      "z": 0,
+      "name": "50% Throttle",
+      "topic": "",
+      "payload": "50",
+      "payloadType": "num",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": "",
+      "x": 415,
+      "y": 1097,
+      "wires": [
+        [
+          "cebcb026.1e5dc"
+        ]
+      ]
+    },
+    {
+      "id": "6510d208.93649c",
+      "type": "inject",
+      "z": 0,
+      "name": "100% Throttle",
+      "topic": "",
+      "payload": "100",
+      "payloadType": "num",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": "",
+      "x": 413,
+      "y": 1155,
+      "wires": [
+        [
+          "cebcb026.1e5dc"
+        ]
+      ]
+    },
+    {
+      "id": "cebcb026.1e5dc",
+      "type": "function",
+      "z": 0,
+      "name": "",
+      "func": "let percent = msg.payload\nlet message = {\n    topic: \"testUUID/control/0/throttle\",\n    payload: {\n        set : percent\n    }\n};\nreturn message;\n\n\n\n",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 650,
+      "y": 1020,
+      "wires": [
+        [
+          "7cd5a433.7d1edc"
+        ]
+      ]
+    },
+    {
+      "id": "1610274d.a232c9",
+      "type": "inject",
+      "z": 0,
+      "name": "0% Throttle",
+      "topic": "",
+      "payload": "0",
+      "payloadType": "num",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": "",
+      "x": 410,
+      "y": 920,
+      "wires": [
+        [
+          "cebcb026.1e5dc"
+        ]
+      ]
+    },
+    {
+      "id": "f1e42f56.e80ed",
+      "type": "inject",
+      "z": "2c93bc3a.a8bc94",
+      "name": "Testing All",
+      "topic": "",
+      "payload": "all",
+      "payloadType": "str",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 220,
+      "y": 300,
+      "wires": [
+        [
+          "ece2df64.0d54e"
+        ]
+      ]
+    },
+    {
+      "id": "80fcc086.023dc",
+      "type": "mqtt out",
+      "z": "2c93bc3a.a8bc94",
+      "name": "",
+      "topic": "",
+      "qos": "",
+      "retain": "",
+      "broker": "5838828f.e06fec",
+      "x": 1030,
+      "y": 600,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "dccce361.e426e",
+      "type": "inject",
+      "z": "2c93bc3a.a8bc94",
+      "name": "Pi State",
+      "topic": "",
+      "payload": "pi_state",
+      "payloadType": "str",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 210,
+      "y": 400,
+      "wires": [
+        [
+          "ece2df64.0d54e"
+        ]
+      ]
+    },
+    {
+      "id": "7c5ac43b.1ac4dc",
+      "type": "inject",
+      "z": "2c93bc3a.a8bc94",
+      "name": "Game State",
+      "topic": "",
+      "payload": "game_state",
+      "payloadType": "str",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 230,
+      "y": 440,
+      "wires": [
+        [
+          "ece2df64.0d54e"
+        ]
+      ]
+    },
+    {
+      "id": "ece2df64.0d54e",
+      "type": "function",
+      "z": "2c93bc3a.a8bc94",
+      "name": "",
+      "func": "\nlet messages = [];\n\nif (msg.payload === \"all\" || msg.payload === \"control\" || msg.payload === \"pi_state\") {\n    \n    let request = {\n        requested : \"debug\"\n    }\n    \n    let msg = {\n        topic: \"testUUID/control/pi_state\",\n        payload: request,\n        retain : true\n    };\n    messages.push(msg);\n}\n\nif (msg.payload === \"all\" || msg.payload === \"control\" || msg.payload === \"game_state\") {\n    let msg = {\n        topic: \"testUUID/control/game_state\",\n        payload: \"Testing Game State\"\n    };\n    messages.push(msg);\n}\n\n\nif (msg.payload === \"all\" || msg.payload === \"control\" || msg.payload === \"channel\" || msg.payload === \"throttle\") {\n    \n    let msg = {\n        topic: \"testUUID/control/1/throttle\",\n        payload: {\n            set : 90\n        }\n    };\n    messages.push(msg);\n}\n\n\nif (msg.payload === \"all\" || msg.payload === \"control\" || msg.payload === \"channel\" || msg.payload === \"event\") {\n    let msg = {\n        topic: \"testUUID/control/1/event\",\n        payload: \"Testing Channel Event\"\n    };\n    messages.push(msg);\n}\n\nif (msg.payload === \"all\" || msg.payload === \"control\" || msg.payload === \"channel\" || msg.payload === \"state\") {\n    let request = {\n        state : \"requested\",\n        target : 0\n    }\n    \n    let msg = {\n        topic: \"testUUID/control/1/1/state\",\n        payload: request\n    };\n    messages.push(msg);\n}\n\n\nif (msg.payload === \"all\" || msg.payload === \"control\" || msg.payload === \"channel\" || msg.payload === \"count\") {\n    let msg = {\n        topic: \"testUUID/control/1/1/count\",\n        payload: \"Testing Resource Count\"\n    };\n    messages.push(msg);\n}\n\nif (msg.payload === \"all\" || msg.payload === \"sensors\") {\n    let msg = {\n        topic: \"testUUID/sensors\",\n        payload: \"Testing Sensors\"\n    };\n    messages.push(msg);\n}\n\n\nif (msg.payload === \"all\" || msg.payload === \"sensorId\") {\n    let msg = {\n        topic: \"testUUID/sensors/1\",\n        payload: \"Testing Specific Sensor\"\n    };\n    messages.push(msg);\n}\n\n\nif (msg.payload === \"all\" || msg.payload === \"trigger_percent\") {\n    let msg = {\n        topic: \"testUUID/sensors/1/trigger_percent\",\n        payload: \"Testing Throttle Percent\"\n    };\n    messages.push(msg);\n}\n\n\nif (msg.payload === \"all\" || msg.payload === \"resources\") {\n    let msg = {\n        topic: \"testUUID/resources\",\n        payload: \"Testing Resources\"\n    };\n    messages.push(msg);\n}\n\n\n\n\n\nreturn [messages];",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 630,
+      "y": 580,
+      "wires": [
+        [
+          "80fcc086.023dc"
+        ]
+      ]
+    },
+    {
+      "id": "aa788b.9bed6778",
+      "type": "inject",
+      "z": "2c93bc3a.a8bc94",
+      "name": "Control",
+      "topic": "",
+      "payload": "control",
+      "payloadType": "str",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 210,
+      "y": 360,
+      "wires": [
+        [
+          "ece2df64.0d54e"
+        ]
+      ]
+    },
+    {
+      "id": "c4f71392.7b4dc",
+      "type": "inject",
+      "z": "2c93bc3a.a8bc94",
+      "name": "Channel",
+      "topic": "",
+      "payload": "channel",
+      "payloadType": "str",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 220,
+      "y": 500,
+      "wires": [
+        [
+          "ece2df64.0d54e"
+        ]
+      ]
+    },
+    {
+      "id": "22154db3.a2ff42",
+      "type": "inject",
+      "z": "2c93bc3a.a8bc94",
+      "name": "Throttle",
+      "topic": "",
+      "payload": "throttle",
+      "payloadType": "str",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 210,
+      "y": 540,
+      "wires": [
+        [
+          "ece2df64.0d54e"
+        ]
+      ]
+    },
+    {
+      "id": "3d89adc0.8d08b2",
+      "type": "inject",
+      "z": "2c93bc3a.a8bc94",
+      "name": "State",
+      "topic": "",
+      "payload": "state",
+      "payloadType": "str",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 210,
+      "y": 580,
+      "wires": [
+        [
+          "ece2df64.0d54e"
+        ]
+      ]
+    },
+    {
+      "id": "c5198f55.fbcf7",
+      "type": "inject",
+      "z": "2c93bc3a.a8bc94",
+      "name": "Count",
+      "topic": "",
+      "payload": "count",
+      "payloadType": "str",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 210,
+      "y": 620,
+      "wires": [
+        [
+          "ece2df64.0d54e"
+        ]
+      ]
+    },
+    {
+      "id": "4f01ff89.f2d1c",
+      "type": "inject",
+      "z": "2c93bc3a.a8bc94",
+      "name": "Event",
+      "topic": "",
+      "payload": "event",
+      "payloadType": "str",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 210,
+      "y": 660,
+      "wires": [
+        [
+          "ece2df64.0d54e"
+        ]
+      ]
+    },
+    {
+      "id": "b1c4865d.e1ff38",
+      "type": "inject",
+      "z": "2c93bc3a.a8bc94",
+      "name": "Sensors",
+      "topic": "",
+      "payload": "sensors",
+      "payloadType": "str",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 220,
+      "y": 720,
+      "wires": [
+        [
+          "ece2df64.0d54e"
+        ]
+      ]
+    },
+    {
+      "id": "6e0125b7.3ada9c",
+      "type": "inject",
+      "z": "2c93bc3a.a8bc94",
+      "name": "Sensor Id",
+      "topic": "",
+      "payload": "sensorId",
+      "payloadType": "str",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 220,
+      "y": 760,
+      "wires": [
+        [
+          "ece2df64.0d54e"
+        ]
+      ]
+    },
+    {
+      "id": "3ad9f917.fccc76",
+      "type": "inject",
+      "z": "2c93bc3a.a8bc94",
+      "name": "Trigger Percent",
+      "topic": "",
+      "payload": "trigger_percent",
+      "payloadType": "str",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 240,
+      "y": 800,
+      "wires": [
+        [
+          "ece2df64.0d54e"
+        ]
+      ]
+    },
+    {
+      "id": "1e5f216a.6827af",
+      "type": "inject",
+      "z": "2c93bc3a.a8bc94",
+      "name": "resources",
+      "topic": "",
+      "payload": "resources",
+      "payloadType": "str",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 220,
+      "y": 860,
+      "wires": [
+        [
+          "ece2df64.0d54e"
+        ]
+      ]
+    },
+    {
+      "id": "c2653dc2.969c9",
+      "type": "inject",
+      "z": "2c93bc3a.a8bc94",
+      "name": "5% Throttle",
+      "topic": "",
+      "payload": "5",
+      "payloadType": "num",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": "",
+      "x": 410,
+      "y": 980,
+      "wires": [
+        [
+          "aef1dd86.11391"
+        ]
+      ]
+    },
+    {
+      "id": "e639e480.020a78",
+      "type": "inject",
+      "z": "2c93bc3a.a8bc94",
+      "name": "30% Throttle",
+      "topic": "",
+      "payload": "30",
+      "payloadType": "num",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": "",
+      "x": 413,
+      "y": 1041,
+      "wires": [
+        [
+          "aef1dd86.11391"
+        ]
+      ]
+    },
+    {
+      "id": "30f7344a.19a83c",
+      "type": "inject",
+      "z": "2c93bc3a.a8bc94",
+      "name": "50% Throttle",
+      "topic": "",
+      "payload": "50",
+      "payloadType": "num",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": "",
+      "x": 415,
+      "y": 1097,
+      "wires": [
+        [
+          "aef1dd86.11391"
+        ]
+      ]
+    },
+    {
+      "id": "217ddf8f.1fd98",
+      "type": "inject",
+      "z": "2c93bc3a.a8bc94",
+      "name": "100% Throttle",
+      "topic": "",
+      "payload": "100",
+      "payloadType": "num",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": "",
+      "x": 413,
+      "y": 1155,
+      "wires": [
+        [
+          "aef1dd86.11391"
+        ]
+      ]
+    },
+    {
+      "id": "aef1dd86.11391",
+      "type": "function",
+      "z": "2c93bc3a.a8bc94",
+      "name": "",
+      "func": "let percent = msg.payload\nlet message = {\n    topic: \"nano274/control/0/throttle\",\n    payload: {\n        set : percent\n    }\n};\nreturn message;\n\n\n\n",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 650,
+      "y": 1020,
+      "wires": [
+        [
+          "80fcc086.023dc"
+        ]
+      ]
+    },
+    {
+      "id": "f9a4ccf0.d4e1a",
+      "type": "inject",
+      "z": "2c93bc3a.a8bc94",
+      "name": "0% Throttle",
+      "topic": "",
+      "payload": "0",
+      "payloadType": "num",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": "",
+      "x": 410,
+      "y": 920,
+      "wires": [
+        [
+          "aef1dd86.11391"
+        ]
+      ]
+    },
+    {
+      "id": "c52ee732.526548",
+      "type": "mqtt-dynamic in",
+      "z": "a53c4dbf.e31fd",
+      "name": "{UUID}/control/pi_state",
+      "broker": "3fed1d09.979342",
+      "x": 800,
+      "y": 380,
+      "wires": [
+        [
+          "83082b9d.95b368"
+        ]
+      ]
+    },
+    {
+      "id": "562f68ea.5ccd48",
+      "type": "mqtt-dynamic in",
+      "z": "a53c4dbf.e31fd",
+      "name": "{UUID}/control/{channel}/throttle",
+      "broker": "8e1af607.1324c8",
+      "x": 1090,
+      "y": 480,
+      "wires": [
+        [
+          "ebb0704e.160d9"
+        ]
+      ]
+    },
+    {
+      "id": "f3203a31.7802f8",
+      "type": "mqtt-dynamic in",
+      "z": "a53c4dbf.e31fd",
+      "name": "{UUID}/control/{channel}/{resourceId}/state",
+      "broker": "8e1af607.1324c8",
+      "x": 1390,
+      "y": 600,
+      "wires": [
+        [
+          "1c2c934a.fdb96d"
+        ]
+      ]
+    },
+    {
+      "id": "36cb210c.e0d14e",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "The State of the Pi",
+      "info": "Allows the Pi to move to another state (such as play to debug)\n\nThe Pi state can only be:\n\n- ready : {state}\n- requested : {target_state}\n- busy : {target_state}",
+      "x": 790,
+      "y": 340,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "c5a4ab00.91af18",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "Throttle Percentage for a Channel",
+      "info": "Sets the throttle percentage for a specific channel (car)",
+      "x": 1100,
+      "y": 440,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "ad77afc4.ac428",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "The State of the Resource",
+      "info": "SPWA can request to set the state of \nthe resource to requested.\n\n",
+      "x": 1390,
+      "y": 560,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "db76f75a.1b6198",
+      "type": "link in",
+      "z": "a53c4dbf.e31fd",
+      "name": "Control-Subscribe",
+      "links": [
+        "a3987ddd.a47a88",
+        "c8b6cd01.41dd8"
+      ],
+      "x": 75,
+      "y": 380,
+      "wires": [
+        [
+          "6c31c460.cf75fc"
+        ]
+      ]
+    },
+    {
+      "id": "a357f70d.54f568",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "/control",
+      "func": "msg.topic = msg.topic+\"/control\";\nreturn msg;\n",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 340,
+      "y": 380,
+      "wires": [
+        [
+          "937752de.b360e",
+          "f4e1641.0c39398"
+        ]
+      ]
+    },
+    {
+      "id": "937752de.b360e",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "/pi_state",
+      "func": "msg.topic = msg.topic+\"/pi_state\";\nreturn msg;\n",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 540,
+      "y": 380,
+      "wires": [
+        [
+          "c52ee732.526548"
+        ]
+      ]
+    },
+    {
+      "id": "f4e1641.0c39398",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "/{channel}",
+      "func": "msg.topic = msg.topic+\"/+\";\nreturn msg;\n",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 540,
+      "y": 480,
+      "wires": [
+        [
+          "a3260424.807338",
+          "bb878a28.9f7e08",
+          "ba2a49c1.de07c8"
+        ]
+      ]
+    },
+    {
+      "id": "a3260424.807338",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "/throttle",
+      "func": "msg.topic = msg.topic+\"/throttle\";\nreturn msg;\n",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 820,
+      "y": 480,
+      "wires": [
+        [
+          "562f68ea.5ccd48"
+        ]
+      ]
+    },
+    {
+      "id": "bb878a28.9f7e08",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "/{resource_id}",
+      "func": "msg.topic = msg.topic+\"/+\";\nreturn msg;\n",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 840,
+      "y": 600,
+      "wires": [
+        [
+          "e8d026a7.678fe8"
+        ]
+      ]
+    },
+    {
+      "id": "e8d026a7.678fe8",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "/state",
+      "func": "msg.topic = msg.topic+\"/state\";\nreturn msg;\n",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 1110,
+      "y": 600,
+      "wires": [
+        [
+          "f3203a31.7802f8"
+        ]
+      ]
+    },
+    {
+      "id": "cc2ccf48.3104e",
+      "type": "link in",
+      "z": "a53c4dbf.e31fd",
+      "name": "Pi_State",
+      "links": [
+        "a2868d01.047f5"
+      ],
+      "x": 195,
+      "y": 1000,
+      "wires": [
+        [
+          "de36cfcc.55eb7"
+        ]
+      ]
+    },
+    {
+      "id": "de36cfcc.55eb7",
+      "type": "json",
+      "z": "a53c4dbf.e31fd",
+      "name": "Request Object",
+      "property": "payload",
+      "action": "obj",
+      "pretty": false,
+      "x": 340,
+      "y": 1000,
+      "wires": [
+        [
+          "a1f3d4d3.ec4268"
+        ]
+      ]
+    },
+    {
+      "id": "8c55bcf9.2fbbf",
+      "type": "switch",
+      "z": "a53c4dbf.e31fd",
+      "name": "Pi State",
+      "property": "payload.requested",
+      "propertyType": "msg",
+      "rules": [
+        {
+          "t": "eq",
+          "v": "debug",
+          "vt": "str"
+        }
+      ],
+      "checkall": "true",
+      "repair": false,
+      "outputs": 1,
+      "x": 800,
+      "y": 1020,
+      "wires": [
+        [
+          
+        ]
+      ]
+    },
+    {
+      "id": "afbeb9fe.588038",
+      "type": "mqtt out",
+      "z": "a53c4dbf.e31fd",
+      "name": "/pi_state",
+      "topic": "",
+      "qos": "",
+      "retain": "true",
+      "broker": "5838828f.e06fec",
+      "x": 1020,
+      "y": 920,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "c2da373b.02d0e8",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "Pi state Ready",
+      "func": "msg.payload = {\n    ready: msg.payload.requested\n};\n\nmsg.retain = true;\n\nreturn msg;\n",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 820,
+      "y": 920,
+      "wires": [
+        [
+          "afbeb9fe.588038"
+        ]
+      ]
+    },
+    {
+      "id": "a1f3d4d3.ec4268",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "Is Requested",
+      "func": "\nif(msg.payload.hasOwnProperty('requested')){\n    return msg;\n}\n\n",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 530,
+      "y": 1000,
+      "wires": [
+        [
+          "8c55bcf9.2fbbf",
+          "c2da373b.02d0e8"
+        ]
+      ]
+    },
+    {
+      "id": "139be71f.6792f9",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "Is A New State Being Requested ",
+      "info": "",
+      "x": 450,
+      "y": 960,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "89429bd7.eabcf8",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "Change Pi State To Ready",
+      "info": "",
+      "x": 890,
+      "y": 880,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "a7b9a7e8.ebbb48",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "Execute Pi State",
+      "info": "",
+      "x": 880,
+      "y": 980,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "a2868d01.047f5",
+      "type": "link out",
+      "z": "a53c4dbf.e31fd",
+      "name": "",
+      "links": [
+        "cc2ccf48.3104e",
+        "8f8af3a0.8309e",
+        "e7851623.a1b2"
+      ],
+      "x": 1175,
+      "y": 380,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "f9b41000.10de8",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "Pi State",
+      "info": "",
+      "x": 190,
+      "y": 960,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "36596ed.bd95f92",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "Pi State",
+      "info": "",
+      "x": 1050,
+      "y": 340,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "a66626f7.3204f8",
+      "type": "link in",
+      "z": "a53c4dbf.e31fd",
+      "name": "Throttle",
+      "links": [
+        "4add2241.21f0cc"
+      ],
+      "x": 195,
+      "y": 1260,
+      "wires": [
+        [
+          "c0fc77d3.f29e08"
+        ]
+      ]
+    },
+    {
+      "id": "34ec645f.c7fd3c",
+      "type": "mqtt out",
+      "z": "a53c4dbf.e31fd",
+      "name": "/throttle",
+      "topic": "",
+      "qos": "",
+      "retain": "true",
+      "broker": "c5febf12.85693",
+      "x": 1140,
+      "y": 1160,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "c0fc77d3.f29e08",
+      "type": "json",
+      "z": "a53c4dbf.e31fd",
+      "name": "Throttle Object",
+      "property": "payload",
+      "action": "obj",
+      "pretty": false,
+      "x": 340,
+      "y": 1260,
+      "wires": [
+        [
+          "10ca7e53.c9e3c2"
+        ]
+      ]
+    },
+    {
+      "id": "1290a6fa.780689",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "Is New Throttle Percentage Being Requested ",
+      "info": "",
+      "x": 610,
+      "y": 1220,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "e4e56ea4.6a042",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "Throttle",
+      "info": "",
+      "x": 190,
+      "y": 1220,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "b573e6d3.a5a408",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "Execute Throttle",
+      "info": "Outputs all channels throttle",
+      "x": 1680,
+      "y": 1120,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "ddc45429.ae57b8",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "Retain New Throttle Percent",
+      "info": "",
+      "x": 1140,
+      "y": 1120,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "4add2241.21f0cc",
+      "type": "link out",
+      "z": "a53c4dbf.e31fd",
+      "name": "",
+      "links": [
+        "a66626f7.3204f8"
+      ],
+      "x": 1475,
+      "y": 480,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "60e47de8.d850c4",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "Throttle",
+      "info": "",
+      "x": 1470,
+      "y": 440,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "83082b9d.95b368",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "Topic Wildcards",
+      "func": "let topicParts = msg.topic.split(\"/\");\n\nmsg.wildcards = {\n    uuid : topicParts[0]\n};\n\nconsole.log(\"UUID\");\nconsole.log(msg.wildcards);\n\n\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 1020,
+      "y": 380,
+      "wires": [
+        [
+          "a2868d01.047f5"
+        ]
+      ]
+    },
+    {
+      "id": "ebb0704e.160d9",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "Topic Wildcards",
+      "func": "let topicParts = msg.topic.split(\"/\");\n\nmsg.wildcards = {\n    uuid : topicParts[0],\n    channel : topicParts[2]\n};\n\n\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 1320,
+      "y": 480,
+      "wires": [
+        [
+          "4add2241.21f0cc"
+        ]
+      ]
+    },
+    {
+      "id": "1c2c934a.fdb96d",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "Topic Wildcards",
+      "func": "let topicParts = msg.topic.split(\"/\");\n\nmsg.wildcards = {\n    uuid : topicParts[0],\n    channel : topicParts[2],\n    resourceId : topicParts[3]\n};\n\n\n\n\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 1680,
+      "y": 600,
+      "wires": [
+        [
+          "8d70ffa4.6108"
+        ]
+      ]
+    },
+    {
+      "id": "b577e4f1.f4aaa8",
+      "type": "link in",
+      "z": "a53c4dbf.e31fd",
+      "name": "Resource",
+      "links": [
+        "8d70ffa4.6108"
+      ],
+      "x": 195,
+      "y": 1620,
+      "wires": [
+        [
+          "18e3c3af.875c4c"
+        ]
+      ]
+    },
+    {
+      "id": "ddc1288f.53dbd8",
+      "type": "mqtt out",
+      "z": "a53c4dbf.e31fd",
+      "name": "/{resourceId}/state",
+      "topic": "",
+      "qos": "",
+      "retain": "true",
+      "broker": "5838828f.e06fec",
+      "x": 1070,
+      "y": 1500,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "e2c90681.59d428",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "Resource State Busy",
+      "func": "msg.payload.state = \"busy\";\n\nmsg.retain = true;\n\nreturn msg;\n",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 840,
+      "y": 1500,
+      "wires": [
+        [
+          "ddc1288f.53dbd8"
+        ]
+      ]
+    },
+    {
+      "id": "6a68ecd7.bcf624",
+      "type": "switch",
+      "z": "a53c4dbf.e31fd",
+      "name": "Is Requested State",
+      "property": "payload.state",
+      "propertyType": "msg",
+      "rules": [
+        {
+          "t": "eq",
+          "v": "requested",
+          "vt": "str"
+        }
+      ],
+      "checkall": "true",
+      "repair": false,
+      "outputs": 1,
+      "x": 550,
+      "y": 1620,
+      "wires": [
+        [
+          "e2c90681.59d428",
+          "6417662e.953368",
+          "a438c7b2.da63d8"
+        ]
+      ]
+    },
+    {
+      "id": "ecd02ae9.aa89f8",
+      "type": "exec",
+      "z": "a53c4dbf.e31fd",
+      "command": "",
+      "addpay": true,
+      "append": "",
+      "useSpawn": "false",
+      "timer": "",
+      "oldrc": false,
+      "name": "Resource State",
+      "x": 2440,
+      "y": 1620,
+      "wires": [
+        [
+          "695d0d86.db61f4"
+        ],
+        [
+          
+        ],
+        [
+          
+        ]
+      ]
+    },
+    {
+      "id": "1b610c4f.9fb534",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "Resource State Ready",
+      "func": "msg.payload = {\n    state : \"ready\"\n};\n\nmsg.retain = true;\n\nreturn msg;\n",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 2980,
+      "y": 1560,
+      "wires": [
+        [
+          "664d143f.79d22c"
+        ]
+      ]
+    },
+    {
+      "id": "6417662e.953368",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "Target Channel Event",
+      "func": "\nlet uuid = msg.wildcards.uuid;\nlet channelTarget = msg.payload.target;\n\nmsg.topic = `${uuid}/control/${channelTarget}/event`\nmsg.payload = {\n    resourceId : msg.wildcards.resourceId,\n}\nmsg.retain = false;\n\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 840,
+      "y": 1740,
+      "wires": [
+        [
+          "454403f2.500d6c"
+        ]
+      ]
+    },
+    {
+      "id": "454403f2.500d6c",
+      "type": "mqtt out",
+      "z": "a53c4dbf.e31fd",
+      "name": "{channel}/event",
+      "topic": "",
+      "qos": "",
+      "retain": "false",
+      "broker": "5838828f.e06fec",
+      "x": 1040,
+      "y": 1740,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "2be7334d.1cb7bc",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "Get Resource Script Path",
+      "func": "let resourceId = msg.wildcards.resourceId;\nlet resources = msg.resources;\n\nlet resourcesPath = msg.payload.paths.resources;\n\nlet channel\n\nif(msg.target == 0){\n    channel = 18;\n}else if(msg.target == 1){\n    channel = 23;\n}\n\nfor(let i=0;i<resources.length;i++){\n    if(resources[i].id == resourceId && resources[i].systemResource == \"throttle\"){\n        msg.payload = `python ${resourcesPath}${resources[i].name}.py ${channel} `;\n        break;\n    }\n}\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 2210,
+      "y": 1620,
+      "wires": [
+        [
+          "ecd02ae9.aa89f8",
+          "2a54c0fb.d765b"
+        ]
+      ]
+    },
+    {
+      "id": "664d143f.79d22c",
+      "type": "mqtt out",
+      "z": "a53c4dbf.e31fd",
+      "name": "/{resourceId}/state",
+      "topic": "",
+      "qos": "",
+      "retain": "true",
+      "broker": "5838828f.e06fec",
+      "x": 3230,
+      "y": 1560,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "18e3c3af.875c4c",
+      "type": "json",
+      "z": "a53c4dbf.e31fd",
+      "name": "Resource Object",
+      "property": "payload",
+      "action": "obj",
+      "pretty": false,
+      "x": 350,
+      "y": 1620,
+      "wires": [
+        [
+          "6a68ecd7.bcf624"
+        ]
+      ]
+    },
+    {
+      "id": "b0158c07.3360e",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "Resource",
+      "info": "",
+      "x": 200,
+      "y": 1580,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "b1d71bc9.f6d318",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "Is A Resource Being Deployed",
+      "info": "",
+      "x": 440,
+      "y": 1580,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "2e00c0b.751d14",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "Change Resource State To Busy",
+      "info": "",
+      "x": 930,
+      "y": 1460,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "e46f88ed.704c68",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "Inform Targeted Channel of Deployed Resource",
+      "info": "",
+      "x": 940,
+      "y": 1700,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "f3dcfe6f.7c38b",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "Retrieve Resource Script ",
+      "info": "",
+      "x": 1450,
+      "y": 1580,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "4aaa1d80.1e2224",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "Execute Deployed Resource",
+      "info": "",
+      "x": 2380,
+      "y": 1560,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "866df858.4aceb8",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "Change Resource State To Ready",
+      "info": "",
+      "x": 3020,
+      "y": 1520,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "8d70ffa4.6108",
+      "type": "link out",
+      "z": "a53c4dbf.e31fd",
+      "name": "Resource",
+      "links": [
+        "b577e4f1.f4aaa8"
+      ],
+      "x": 1815,
+      "y": 600,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "5af511af.57429",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "Resource",
+      "info": "",
+      "x": 1820,
+      "y": 560,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "d8234a42.55caa8",
+      "type": "json",
+      "z": "a53c4dbf.e31fd",
+      "name": "Sensors Object",
+      "property": "payload",
+      "action": "obj",
+      "pretty": false,
+      "x": 540,
+      "y": 1980,
+      "wires": [
+        [
+          "231c0f9.909baf"
+        ]
+      ]
+    },
+    {
+      "id": "30bbf399.d4efac",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "Retrieve Sensors",
+      "info": "",
+      "x": 440,
+      "y": 1940,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "231c0f9.909baf",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "/sensors",
+      "func": "\nmsg.topic = msg.config.uuid+\"/sensors\";\nconsole.log(\"uuid: \" + msg.config.uuid);\nconsole.log(\"topic: \" + msg.topic);\nmsg.retain = true;\nreturn msg;\n",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 700,
+      "y": 1980,
+      "wires": [
+        [
+          "5f4832e1.e93dcc",
+          "351a5056.64b79"
+        ]
+      ]
+    },
+    {
+      "id": "5f4832e1.e93dcc",
+      "type": "mqtt out",
+      "z": "a53c4dbf.e31fd",
+      "name": "/sensors",
+      "topic": "",
+      "qos": "",
+      "retain": "true",
+      "broker": "5838828f.e06fec",
+      "x": 920,
+      "y": 1980,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "6c31c460.cf75fc",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "/{UUID}",
+      "func": "msg.topic = msg.config.uuid;\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 180,
+      "y": 380,
+      "wires": [
+        [
+          "a357f70d.54f568"
+        ]
+      ]
+    },
+    {
+      "id": "964c2f33.6ddfc",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "Publish Sensor Config Data",
+      "info": "",
+      "x": 800,
+      "y": 1940,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "351a5056.64b79",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "Set Default Trigger Percentages",
+      "func": "let triggerPercentMsgs = [];\n\nmsg.payload.forEach(function(sensor){\n    let message = {\n        topic : `${msg.config.uuid}/sensors/${sensor.id}/trigger_percent`,\n        payload : sensor.default_trigger,\n        retain : true\n    }\n    \n    triggerPercentMsgs.push(message);\n})\n\n\n\n\nreturn [triggerPercentMsgs];",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 1050,
+      "y": 2100,
+      "wires": [
+        [
+          "46b7518c.c870e"
+        ]
+      ]
+    },
+    {
+      "id": "46b7518c.c870e",
+      "type": "mqtt out",
+      "z": "a53c4dbf.e31fd",
+      "name": "/sensors/{sensorId}/trigger_percent",
+      "topic": "",
+      "qos": "",
+      "retain": "true",
+      "broker": "5838828f.e06fec",
+      "x": 1400,
+      "y": 2100,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "c506cf75.a5043",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "Publish Sensor Default Trigger Percents",
+      "info": "",
+      "x": 1290,
+      "y": 2060,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "1bf76f3c.11b1f1",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "TODO WHEN RESOURCE FAILS",
+      "info": "",
+      "x": 2690,
+      "y": 1640,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "497e2e17.eae0e",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "Sensor Details",
+      "func": "let brokerDetails = msg.config.broker;\n\nlet sensorsPath = msg.config.paths.sensors;\n\nlet uuid = msg.config.uuid;\n\nlet command = `python ${sensorsPath} ${uuid} ${brokerDetails.host} ${brokerDetails.port} `\n\nif(brokerDetails.username && brokerDetails.username !== \"None\"){\n    command += ` --username ${brokerDetails.username}`;\n}\n\nif(brokerDetails.password && brokerDetails.password !== \"None\"){\n    command += ` --password ${brokerDetails.password}`;\n}\n\n\nconsole.log(\"sensor connection command:\");\nconsole.log(command);\n\nmsg.payload = command\n\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 180,
+      "y": 2060,
+      "wires": [
+        [
+          "d500ab8e.d031c8"
+        ]
+      ]
+    },
+    {
+      "id": "d500ab8e.d031c8",
+      "type": "exec",
+      "z": "a53c4dbf.e31fd",
+      "command": "",
+      "addpay": true,
+      "append": "",
+      "useSpawn": "false",
+      "timer": "",
+      "oldrc": false,
+      "name": "Start Sensors",
+      "x": 480,
+      "y": 2060,
+      "wires": [
+        [
+          
+        ],
+        [
+          
+        ],
+        [
+          
+        ]
+      ]
+    },
+    {
+      "id": "e33c418a.d4e48",
+      "type": "inject",
+      "z": "a53c4dbf.e31fd",
+      "name": "onStart",
+      "topic": "",
+      "payload": "",
+      "payloadType": "date",
+      "repeat": "",
+      "crontab": "",
+      "once": true,
+      "onceDelay": "1",
+      "x": 180,
+      "y": 180,
+      "wires": [
+        [
+          "c4bb8292.31092"
+        ]
+      ]
+    },
+    {
+      "id": "c4bb8292.31092",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "Set Global Context",
+      "func": "global.set(\"configPath\",\"/home/pi/github/pi_scalextric_mqtt/mqtt/src/Config/\");\nmsg.payload = \"config.json\"\nreturn msg;\n\n",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 370,
+      "y": 180,
+      "wires": [
+        [
+          "25ba6c0.dad6994"
+        ]
+      ]
+    },
+    {
+      "id": "25ba6c0.dad6994",
+      "type": "subflow:6d1f01a4.57281",
+      "z": "a53c4dbf.e31fd",
+      "name": "",
+      "x": 560,
+      "y": 180,
+      "wires": [
+        [
+          "bfc6f44d.8579f8"
+        ]
+      ]
+    },
+    {
+      "id": "c8b6cd01.41dd8",
+      "type": "link out",
+      "z": "a53c4dbf.e31fd",
+      "name": "",
+      "links": [
+        "db76f75a.1b6198",
+        "15e6c91f.e71697",
+        "f4bb2718.3bb798"
+      ],
+      "x": 895,
+      "y": 180,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "10ca7e53.c9e3c2",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "Throttle Set",
+      "func": "if(msg.payload.hasOwnProperty('set')){\n    return msg;\n}\n\n\n\n",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 710,
+      "y": 1260,
+      "wires": [
+        [
+          "8d16b3f1.665eb",
+          "fbf6758a.114f28"
+        ]
+      ]
+    },
+    {
+      "id": "e056d705.149988",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "Read Config File",
+      "info": "",
+      "x": 500,
+      "y": 140,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "3a1162b0.1dd18e",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "Connects to Subscribers",
+      "info": "",
+      "x": 730,
+      "y": 140,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "ba2a49c1.de07c8",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "/event",
+      "func": "msg.topic = msg.topic+\"/event\";\nreturn msg;\n",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 810,
+      "y": 680,
+      "wires": [
+        [
+          "de4615ae.76bca8"
+        ]
+      ]
+    },
+    {
+      "id": "de4615ae.76bca8",
+      "type": "mqtt-dynamic in",
+      "z": "a53c4dbf.e31fd",
+      "name": "{UUID}/control/{channel}/event",
+      "broker": "8e1af607.1324c8",
+      "x": 1110,
+      "y": 680,
+      "wires": [
+        [
+          
+        ]
+      ]
+    },
+    {
+      "id": "865da843.122098",
+      "type": "rpi-gpio out",
+      "z": "a53c4dbf.e31fd",
+      "name": "",
+      "pin": "12",
+      "set": "",
+      "level": "0",
+      "freq": "50",
+      "out": "pwm",
+      "x": 1700,
+      "y": 1220,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "4ccfd52.9907c2c",
+      "type": "switch",
+      "z": "a53c4dbf.e31fd",
+      "name": "Which Channel",
+      "property": "wildcards.channel",
+      "propertyType": "msg",
+      "rules": [
+        {
+          "t": "eq",
+          "v": "0",
+          "vt": "num"
+        },
+        {
+          "t": "eq",
+          "v": "1",
+          "vt": "num"
+        }
+      ],
+      "checkall": "true",
+      "repair": false,
+      "outputs": 2,
+      "x": 1460,
+      "y": 1260,
+      "wires": [
+        [
+          "865da843.122098"
+        ],
+        [
+          "5f3f8270.7d1e7c"
+        ]
+      ]
+    },
+    {
+      "id": "8d16b3f1.665eb",
+      "type": "change",
+      "z": "a53c4dbf.e31fd",
+      "name": "Get Throttle Percent",
+      "rules": [
+        {
+          "t": "move",
+          "p": "payload.set",
+          "pt": "msg",
+          "to": "payload",
+          "tot": "msg"
+        }
+      ],
+      "action": "",
+      "property": "",
+      "from": "",
+      "to": "",
+      "reg": false,
+      "x": 920,
+      "y": 1260,
+      "wires": [
+        [
+          "34ec645f.c7fd3c",
+          "d048b162.20ede"
+        ]
+      ]
+    },
+    {
+      "id": "a438c7b2.da63d8",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "Lock Throttle Changes",
+      "func": "flow.set(`channel_${msg.payload.target}_lock`,true);\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 800,
+      "y": 1620,
+      "wires": [
+        [
+          "484c2f22.541ea"
+        ]
+      ]
+    },
+    {
+      "id": "484c2f22.541ea",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "Store Target",
+      "func": "msg.target = msg.payload.target;\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 1010,
+      "y": 1620,
+      "wires": [
+        [
+          "77d0d7e0.1aad48"
+        ]
+      ]
+    },
+    {
+      "id": "695d0d86.db61f4",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "Un-Lock Throttle Changes",
+      "func": "flow.set(`channel_${msg.target}_lock`,false);\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 2720,
+      "y": 1560,
+      "wires": [
+        [
+          "1b610c4f.9fb534"
+        ]
+      ]
+    },
+    {
+      "id": "d048b162.20ede",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "Is Un-Locked",
+      "func": "let lock = flow.get(`channel_${msg.wildcards.channel}_lock`);\nnode.log(lock);\nif(!lock){\n    return msg;    \n}\n",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 1260,
+      "y": 1260,
+      "wires": [
+        [
+          "4ccfd52.9907c2c"
+        ]
+      ]
+    },
+    {
+      "id": "f4bb2718.3bb798",
+      "type": "link in",
+      "z": "a53c4dbf.e31fd",
+      "name": "Init-Pi",
+      "links": [
+        "adc2fcbc.29e718",
+        "a3987ddd.a47a88",
+        "c8b6cd01.41dd8"
+      ],
+      "x": 60,
+      "y": 1980,
+      "wires": [
+        [
+          "497e2e17.eae0e",
+          "a0501687.2398d8"
+        ]
+      ]
+    },
+    {
+      "id": "5f3f8270.7d1e7c",
+      "type": "rpi-gpio out",
+      "z": "a53c4dbf.e31fd",
+      "name": "",
+      "pin": "11",
+      "set": "",
+      "level": "0",
+      "freq": "50",
+      "out": "pwm",
+      "x": 1670,
+      "y": 1320,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "15e6c91f.e71697",
+      "type": "link in",
+      "z": "a53c4dbf.e31fd",
+      "name": "Init-Pi",
+      "links": [
+        "c8b6cd01.41dd8"
+      ],
+      "x": 75,
+      "y": 2300,
+      "wires": [
+        [
+          "f957acd.219ab5"
+        ]
+      ]
+    },
+    {
+      "id": "86938657.fe10e8",
+      "type": "json",
+      "z": "a53c4dbf.e31fd",
+      "name": "Resources Object",
+      "property": "payload",
+      "action": "obj",
+      "pretty": false,
+      "x": 550,
+      "y": 2300,
+      "wires": [
+        [
+          "f0151177.3f0cf"
+        ]
+      ]
+    },
+    {
+      "id": "1261acc4.084543",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "Retrieve Sensors",
+      "info": "",
+      "x": 400,
+      "y": 2260,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "f0151177.3f0cf",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "/resources",
+      "func": "\nmsg.topic = msg.config.uuid+\"/resources\";\nconsole.log(\"uuid: \" + msg.config.uuid);\nconsole.log(\"topic: \" + msg.topic);\nmsg.retain = true;\nreturn msg;\n",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 750,
+      "y": 2300,
+      "wires": [
+        [
+          "3d0c6ec6.8677b2"
+        ]
+      ]
+    },
+    {
+      "id": "3d0c6ec6.8677b2",
+      "type": "mqtt out",
+      "z": "a53c4dbf.e31fd",
+      "name": "/resources",
+      "topic": "",
+      "qos": "",
+      "retain": "true",
+      "broker": "5838828f.e06fec",
+      "x": 950,
+      "y": 2300,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "d31926ef.b14848",
+      "type": "comment",
+      "z": "a53c4dbf.e31fd",
+      "name": "Publish Sensor Config Data",
+      "info": "",
+      "x": 840,
+      "y": 2260,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "bfc6f44d.8579f8",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "Set Payload To Config",
+      "func": "msg.config = msg.payload;\nreturn msg;\n\n",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 760,
+      "y": 180,
+      "wires": [
+        [
+          "c8b6cd01.41dd8"
+        ]
+      ]
+    },
+    {
+      "id": "77d0d7e0.1aad48",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "Resources File",
+      "func": "msg.payload= 'resources.json';\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 1200,
+      "y": 1620,
+      "wires": [
+        [
+          "bd19c20b.dd12d"
+        ]
+      ]
+    },
+    {
+      "id": "bd19c20b.dd12d",
+      "type": "subflow:6d1f01a4.57281",
+      "z": "a53c4dbf.e31fd",
+      "name": "",
+      "x": 1390,
+      "y": 1620,
+      "wires": [
+        [
+          "452abff9.b22e4"
+        ]
+      ]
+    },
+    {
+      "id": "452abff9.b22e4",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "Store Resources",
+      "func": "msg.resources = msg.payload\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 1590,
+      "y": 1620,
+      "wires": [
+        [
+          "342f239a.ea49fc"
+        ]
+      ]
+    },
+    {
+      "id": "342f239a.ea49fc",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "Config File",
+      "func": "msg.payload= 'config.json';\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 1790,
+      "y": 1620,
+      "wires": [
+        [
+          "caf797af.c94b18"
+        ]
+      ]
+    },
+    {
+      "id": "caf797af.c94b18",
+      "type": "subflow:6d1f01a4.57281",
+      "z": "a53c4dbf.e31fd",
+      "name": "",
+      "x": 1950,
+      "y": 1620,
+      "wires": [
+        [
+          "2be7334d.1cb7bc"
+        ]
+      ]
+    },
+    {
+      "id": "288f49f2.5ca5c6",
+      "type": "subflow:6d1f01a4.57281",
+      "z": "a53c4dbf.e31fd",
+      "name": "",
+      "x": 370,
+      "y": 1980,
+      "wires": [
+        [
+          "d8234a42.55caa8"
+        ]
+      ]
+    },
+    {
+      "id": "a0501687.2398d8",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "Sensor File",
+      "func": "msg.payload = \"sensors.json\";\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 190,
+      "y": 1980,
+      "wires": [
+        [
+          "288f49f2.5ca5c6"
+        ]
+      ]
+    },
+    {
+      "id": "f957acd.219ab5",
+      "type": "function",
+      "z": "a53c4dbf.e31fd",
+      "name": "Resources File",
+      "func": "msg.payload= 'resources.json';\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 200,
+      "y": 2300,
+      "wires": [
+        [
+          "4c30363a.d798b8"
+        ]
+      ]
+    },
+    {
+      "id": "4c30363a.d798b8",
+      "type": "subflow:6d1f01a4.57281",
+      "z": "a53c4dbf.e31fd",
+      "name": "",
+      "x": 370,
+      "y": 2300,
+      "wires": [
+        [
+          "86938657.fe10e8"
+        ]
+      ]
+    },
+    {
+      "id": "fbf6758a.114f28",
+      "type": "debug",
+      "z": "a53c4dbf.e31fd",
+      "name": "",
+      "active": true,
+      "tosidebar": true,
+      "console": false,
+      "tostatus": false,
+      "complete": "true",
+      "x": 1120,
+      "y": 1060,
+      "wires": [
+        
+      ]
+    },
+    {
+      "id": "2a54c0fb.d765b",
+      "type": "debug",
+      "z": "a53c4dbf.e31fd",
+      "name": "",
+      "active": true,
+      "tosidebar": true,
+      "console": false,
+      "tostatus": false,
+      "complete": "true",
+      "x": 2640,
+      "y": 1720,
+      "wires": [
+        
+      ]
+    }
+  ]
