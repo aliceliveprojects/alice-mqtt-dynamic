@@ -262,7 +262,7 @@
       "type": "mqtt-broker",
       "z": "",
       "name": "websockets",
-      "broker": "ws://thedigitallabsmqtt.herokuapp.com",
+      "broker": "thedigitallabsmqtt.herokuapp.com",
       "port": "80",
       "clientid": "",
       "usetls": false,

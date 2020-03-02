@@ -219,6 +219,7 @@
     },
     "mqtt": {
         "label": {
+            "scheme":"Scheme",
             "broker": "Server",
             "qos": "QoS",
             "clientid": "Client ID",
