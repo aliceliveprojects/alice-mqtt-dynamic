@@ -1,36 +1,34 @@
 {
-  "name": "node-red-contrib-alice-mqtt-dynamic",
-  "version": "1.0.9",
-  "description": "Mqtt with backpressure support, support for ws: and mqtt:",
+  "name": "node-red-contrib-mqtt-dynamictopic",
+  "version": "1.0.1",
+  "description": "Default MQTT in node, but with msg.topic support.",
   "main": "mqtt-dynamic.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "mqtt": "0.3.x",
+    "is-utf8": "0.2.0"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aliceliveprojects/alice-mqtt-dynamic.git"
+    "url": "git+https://github.com/xTheRamon/node-red-contrib-mqtt-dynamictopic.git"
   },
   "keywords": [
-    "node-red",
-    "mqtt",
-    "ws",
-    "websockets",
-    "backpressure"
+    "node-red"
   ],
   "node-red": {
     "nodes": {
-      "mqtt-dynamic": "mqtt-dynamic.js",
-      "mqtt-dynamic complete": "mqtt-dynamic-complete.js"
+      "mqtt-dynamic": "mqtt-dynamic.js"
     }
   },
-  "author": "Sajay Antony with alice",
-  "license": "Apache-2.0",
+  "author": "xTheRamon + FredThx",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aliceliveprojects/alice-mqtt-dynamic/issues"
+    "url": "https://github.com/FredThx/node-red-contrib-mqtt-dynamictopic/issues"
   },
-  "homepage": "https://github.com/aliceliveprojects/alice-mqtt-dynamic#readme",
-  "dependencies": {
-    "is-utf8": "^0.2.1",
-    "mqtt": "^1.8.0"
-  }
+  "homepage": "https://github.com/FredThx/node-red-contrib-mqtt-dynamictopic#readme"
 }

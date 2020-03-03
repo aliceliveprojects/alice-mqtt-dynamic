@@ -1,7 +1,19 @@
 # alice-mqtt-dynamic
-Node-RED mqtt node reproduced from https://github.com/sajayantony/node-red-contrib-mqtt-dynamic with thanks. Going to attempt to make changes allowing the Paho client to be configured for MQTT over WS. Cross your fingers.
+Node-RED mqtt node reproduced from https://github.com/xTheRamon/node-red-contrib-mqtt-dynamictopic with thanks. 
+Going to attempt to make changes allowing the Paho client to be configured for MQTT over WS. Cross your fingers.
 
 
-# MQTT Dynamic (from the original)
+# node-red-contrib-mqtt-dynamictopic (from the original)
+This is a node module for node-red that is identical to the default MQTT node. The difference with the MQTT node is that this dynamic node supports topics/channels passed through msg.topic.
 
-A fork of the [MQTT implemenation](https://github.com/node-red/node-red/blob/master/nodes/core/io/10-mqtt.js) that supports back pressure. The `Complete MQTT` node enables the trigger to continue recieving. If we complete as the next step then the this is almost equivalent to the concurrent model. 
+# Installing
+Simply install using the palette in node-red.
+
+### Creds
+I have used `node-red-contrib-mqtt-env` as a raw base for this node. Thank you.
+
+# Version
+This is a fork of `node-red-contrib-mqtt-dynamictopic`
+=> correct multi subscriptions usage and unsubscriptions.
+
+
