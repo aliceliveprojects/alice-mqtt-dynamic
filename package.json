@@ -10,8 +10,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "mqtt": "0.3.x",
-    "is-utf8": "0.2.0"
+    "is-utf8": "0.2.0",
+    "mqtt": "^3.0.0",
+    "ws": "^7.2.1"
   },
   "repository": {
     "type": "git",

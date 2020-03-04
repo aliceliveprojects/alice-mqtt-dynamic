@@ -23,7 +23,6 @@ module.exports = function(RED) {
     function MQTTBrokerNode(n) {
         RED.nodes.createNode(this,n);
         this.broker = n.broker;
-        this.port = n.port;
         this.clientid = n.clientid;
         if (this.credentials) {
             this.username = this.credentials.user;
@@ -53,7 +52,7 @@ module.exports = function(RED) {
                     }
                     //this.client.disconnect();
                 } else {
-                  this.client = connectionPool.get(this.brokerConfig.broker,this.brokerConfig.port,this.brokerConfig.clientid,this.brokerConfig.username,this.brokerConfig.password);
+                  this.client = connectionPool.get(this.brokerConfig.broker,this.brokerConfig.clientid,this.brokerConfig.username,this.brokerConfig.password);
                 }
                 if (msg.topic && msg.topic.length > 0) {
                     this.topic = msg.topic;
